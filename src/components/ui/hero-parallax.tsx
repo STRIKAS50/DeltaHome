@@ -43,7 +43,7 @@ export const HeroParallax = ({
     springConfig
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.4], [0.2, 1]),
     springConfig
   );
   const rotateZ = useSpring(
@@ -130,10 +130,10 @@ export const Header = () => {
         </div>
         <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
           <Image
-            src="/Component 22.png"
+            src="/Hometest.png"
             alt="Picture of the author"
-            width={300}
-            height={300}
+            width={350}
+            height={350}
             objectFit="cover"
             quality={100}
             className="z-100"
