@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { CardItem } from "./3d-card";
 
 export const HoverEffect = ({
     items,
@@ -13,6 +14,7 @@ export const HoverEffect = ({
         description: string;
         link: string;
         image: string;
+        feature:string;
     }[];
     className?: string;
 }) => {
@@ -64,6 +66,17 @@ export const HoverEffect = ({
                         <div >
                             <CardTitle >{item.title}</CardTitle>
                             <CardDescription >{item.description}</CardDescription>
+                            {item.feature && (
+                                <>
+                                <CardTitle className="my-3 font-bold"><u>Key Features</u> </CardTitle>
+                                <ul className="list-disc pl-5 mt-2">
+                                    {item.feature.split('\n').map((feat, index) => (
+                                        <li key={index}>{feat}</li>
+                                    ))}
+                                </ul>
+                                </>
+                            )}
+                     
                         </div>
                     </Card>
                 </Link>

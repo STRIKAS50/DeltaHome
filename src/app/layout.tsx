@@ -4,7 +4,13 @@ import "./globals.css";
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from '@vercel/analytics/react';
+import SiteHeader from "./widgets/header";
+import { Footer } from "antd/es/layout/layout";
+import { SiteFooter } from "./widgets/Footer";
+import Contactus from "./widgets/ContactUs";
 const inter = Inter({ subsets: ["latin"] });
+// import '@mantine/core/styles.css';
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,9 +18,8 @@ export const metadata: Metadata = {
 };
 
 
-// export function cn(...inputs: ClassValue[]) {
-//   return twMerge(clsx(...inputs));
-// }
+
+
 
 export default function RootLayout({
   children,
@@ -23,8 +28,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
-        <Analytics /></body>
+      
+      <body>
+      <div className="pt-5">
+      <SiteHeader/>
+      </div>
+
+      {children}
+        <Analytics />
+        <div>
+            <Contactus/>
+          </div>
+       
+        <div>
+ <SiteFooter/>
+            
+          </div>
+        </body>
     </html>
   );
 }

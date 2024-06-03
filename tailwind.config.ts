@@ -4,10 +4,10 @@ const {
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const svgToDataUri = require("mini-svg-data-uri");
- 
+
 const colors = require("tailwindcss/colors");
 const config: Config = {
-  
+
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,21 +23,36 @@ const config: Config = {
       },
     },
     animation: {
+      meteor: "meteor 5s linear infinite",
       marquee: "marquee var(--duration) linear infinite",
       "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       grid: "grid 15s linear infinite",
       orbit: "orbit calc(var(--duration)*1s) linear infinite",
+      "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
     },
-    
+
     keyframes: {
+      "border-beam": {
+        "100%": {
+          "offset-distance": "100%",
+        },
+      },
+      meteor: {
+        "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+        "70%": { opacity: "1" },
+        "100%": {
+          transform: "rotate(215deg) translateX(-500px)",
+          opacity: "0",
+        },
+      },
       orbit: {
         "0%": {
-            transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
         },
         "100%": {
-            transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
         },
-    },
+      },
       grid: {
         "0%": { transform: "translateY(-50%)" },
         "100%": { transform: "translateY(0)" },
@@ -77,14 +92,14 @@ const config: Config = {
     },
 
   ],
-  
+
 };
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });

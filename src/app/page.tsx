@@ -21,12 +21,17 @@ import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card"
 import AnimatedGridPatternDemo from "./widgets/Grid-Pattern";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
-
+import NumberTicker from "@/components/magicui/number-ticker";
+import showcase from "../../public/Group 22276showcase.png"
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
-import Icons from '../app/widgets/IconCircle'; // Adjust the path as necessary
-
-
+import Icons from '../app/widgets/IconCircle'; 
 import { SparklesCore } from "../components/ui/sparkles";
+import { RetroGridDemo } from "./widgets/retroGrid";
+import Meteors from "@/components/magicui/meteors";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import Contactus from "@/app/widgets/ContactUs"
+import SiteHeader from "@/app/widgets/header"
+import {SiteFooter} from "@/app/widgets/Footer"
 
 
 export default function Home() {
@@ -36,45 +41,52 @@ export default function Home() {
     {
       title: "Strategy",
       description:
-        "Focuses on delivering scalable, integrated solutions that enhance efficiency, user experience, and business value for clients.",
+          "Focuses on delivering scalable, integrated solutions that enhance efficiency, user experience, and business value for clients.",
       link: "#",
-      image: strategy.src
-    },
-    {
+      image: strategy.src,
+      feature:""
+  },
+  {
       title: "Branding",
       description:
-        "Branding is the process of creating a unique identity and image for a product or company in the consumers' mind through consistent theme, messaging, and visual elements.",
+      "Branding is the process of creating a unique identity and image for a product or company in the consumers' mind through consistent theme, messaging, and visual elements.",
       link: "#",
-      image: braning.src
-    },
-    {
+      image: braning.src,
+      feature:"",
+      
+  },
+  {
       title: "Development",
       description:
-        "Development is the systematic process of growth and improvement through planning, innovation, and implementation of effective strategies.",
+      "Development is the systematic process of growth and improvement through planning, innovation, and implementation of effective strategies.",
       link: "#",
-      image: dev.src
-    },
-    {
+      image: dev.src,
+      feature:""
+  },
+  {
       title: "Web Design",
       description:
-        "Web design is the art and science of creating visually appealing, user-friendly, and responsive websites that provide an optimal user experience across all devices.",
+      "Web design is the art and science of creating visually appealing, user-friendly, and responsive websites that provide an optimal user experience across all devices.",
       link: "#",
-      image: webd.src
-    },
-    {
+      image: webd.src,
+      feature:""
+  },
+  {
       title: "Social Media",
       description:
-        "Social media is a dynamic platform for communication and engagement, enabling individuals and businesses to connect, share content, and build communities online.",
+      "Social media is a dynamic platform for communication and engagement, enabling individuals and businesses to connect, share content, and build communities online.",
       link: "#",
-      image: media.src
-    },
-    {
+      image: media.src,
+      feature:""
+  },
+  {
       title: "Ecommerce",
       description:
-        "Ecommerce is the buying and selling of goods and services over the internet, offering convenience, a wide selection, and seamless transactions for consumers and businesses alike.",
+      "Ecommerce is the buying and selling of goods and services over the internet, offering convenience, a wide selection, and seamless transactions for consumers and businesses alike.",
       link: "#",
-      image: ECOM.src
-    },
+      image: ECOM.src,
+      feature:""
+  },
   ];
   return (
     <>
@@ -94,8 +106,8 @@ export default function Home() {
       >
       
       </Background> */}
-      <Navbar />
-
+      {/* <Navbar /> */}
+     
       <div >
         <HeroParalla />
       </div>
@@ -104,21 +116,16 @@ export default function Home() {
         <AnimatedGridPatternDemo />
       </div>
 
-      <div className="max-w-8xl mx-auto px-8 py-10 pt-10 mt-10">
-        <h2 className=" text-4xl p-5 sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500   my-3 flex justify-center">
-          Services We Provide<br />
-        </h2>
-        <HoverEffect items={projects} />
-      </div>
 
 
+      {/* 
       <div className="pt-5">
         <MarqueeDemo />
-      </div>
+      </div> */}
 
 
 
-      <div className="h-[50rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col">
+      <div className="h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col">
         <div className="absolute top-8 left-10  mt-4 ml-4 z-20">
           <p className="text-4xl p-5 sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200  to-neutral-500 py-8">
             Solutions
@@ -128,10 +135,10 @@ export default function Home() {
           <p className="text-2xl pt-10 mt-5 ml-5 sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400">
             Emphasize your expertise in providing comprehensive ERP solutions tailored to meet the specific needs of businesses.
           </p>
-          <div className="flex sm:flex-row pr-10 w-full flex-col gap-5">
+          <div className="flex sm:flex-row pr-10 w-full justify-between  flex-col gap-5">
 
             <CardContainer className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]   h-auto rounded-xl p-6 border  ">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -169,7 +176,7 @@ export default function Home() {
               </CardBody>
             </CardContainer>
             <CardContainer className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]   h-auto rounded-xl p-6 border  ">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -207,7 +214,7 @@ export default function Home() {
               </CardBody>
             </CardContainer>
             <CardContainer className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]   h-auto rounded-xl p-6 border  ">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -251,19 +258,19 @@ export default function Home() {
               </CardBody>
             </CardContainer>
           </div>
-          <div className="flex justify-center  item-center">
+          {/* <div className="flex justify-center  item-center">
             <button className="px-8 py-2 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500">
               Explore More
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]">
         </div>
       </div>
 
 
-      <div className="h-[60rem] relative w-full bg-black flex flex-col  overflow-hidden my-10 pt-5 rounded-md">
-        <div className="w-full absolute inset-0 h-screen">
+      <div className="h-[70rem] relative w-full bg-black flex flex-col  overflow-hidden my-10 pt-5 rounded-md">
+        <div className="w-full absolute inset-0 h-[70rem]">
           <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
@@ -276,8 +283,8 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row items-start justify-between">
-          <div className="flex flex-col justify-start">
-            <p className="text-4xl p-5 ml-5 sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+          <div className="flex flex-col pt-20 justify-start">
+            <p className="text-4xl p-5 pt-10 mt-10 ml-5 sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
               Why Choose Delta?
             </p>
             <p className="text-2xl ml-5 pl-8 sm:text-2xl  text-white font-bold bg-clip-text">
@@ -285,7 +292,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-end mr-10">
+          <div className="flex pt-20 mt-10 justify-end mr-10">
             <Image
               src={weLesds.src}
               alt="Picture of the author"
@@ -299,13 +306,16 @@ export default function Home() {
 
         </div>
 
+        <div>
+
+        </div>
         <div className="relative flex h-[110rem] w-full max-w-[52rem] items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
-          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+          <span className="pointer-events-none  whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
             Our Clients
           </span>
           {/* Inner Circles */}
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none   bg-transparent"
             reverse
             radius={250}
             duration={20}
@@ -314,7 +324,7 @@ export default function Home() {
             <Icons.GAInfra size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={250}
             duration={20}
@@ -323,7 +333,7 @@ export default function Home() {
             <Icons.Desire size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={250}
             duration={20}
@@ -332,7 +342,7 @@ export default function Home() {
             <Icons.Duke size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={250}
             duration={20}
@@ -341,7 +351,7 @@ export default function Home() {
             <Icons.prompt size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={180}
             duration={20}
@@ -350,7 +360,7 @@ export default function Home() {
             <Icons.Chem size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={180}
             duration={15}
@@ -359,7 +369,7 @@ export default function Home() {
             <Icons.Acem size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={180}
             duration={10}
@@ -368,7 +378,7 @@ export default function Home() {
             <Icons.Angel size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={130}
             duration={10}
@@ -377,7 +387,7 @@ export default function Home() {
             <Icons.Bodal size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={130}
             duration={10}
@@ -386,7 +396,7 @@ export default function Home() {
             <Icons.rotodel size={50} color="yellow" />
           </OrbitingCircles>
           <OrbitingCircles
-            className="h-[50px] w-[50px] border-none bg-transparent"
+            className="h-[50px] w-[50px] border-none  bg-transparent"
             reverse
             radius={130}
             duration={10}
@@ -394,12 +404,52 @@ export default function Home() {
           >
             <Icons.banas size={50} color="yellow" />
           </OrbitingCircles>
+
         </div>
 
-
-
+        {/* <div className="flex justify-end h-auto" >
+          yihi
+          <p className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white">
+            <NumberTicker value={100} />
+          </p>
+        </div> */}
       </div>
 
+      <div className="max-w-8xl mx-auto px-8 h-screen py-10 pt-10 mt-10">
+        <h2 className=" text-4xl p-5 sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500   my-3 flex justify-center">
+          Services We Provide<br />
+        </h2>
+       <div className="h-40">
+       <HoverEffect items={projects}  />
+       </div>
+      </div>
+   
+      <div className="relative flex h-screen w-screen  justify-center overflow-hidden bg-background md:shadow-xl"> 
+      <div className="relative z-10 ">
+      <p className="whitespace-pre-wrap text-8xl mt-10 pt-20 font-medium tracking-tighter text-black dark:text-white">
+          Latest <span className="text-teal-400">Showcase</span> & <span className="text-teal-400">Solutions</span><br />
+        </p>
+      </div>
+        <Meteors number={170}  />
+
+   
+      
+      <div className="absolute  rounded-xl bottom-0 mt-10 pt-20 left-1/2 transform -translate-x-1/2 z-10">
+        <Image
+          src={showcase.src}
+          alt="Background Image"
+          width={800} 
+          height={800}
+          objectFit="cover"
+          quality={100}
+        />
+      <BorderBeam size={250} duration={12} delay={9} />
+      </div>
+
+        <Meteors number={170}  />
+    </div>
+
+        
       {/* <div className="p-5 flex justify-end">
           <Grid />
         </div> */}
