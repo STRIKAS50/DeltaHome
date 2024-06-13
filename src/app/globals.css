@@ -38,6 +38,12 @@ body {
   }
 }
 
+.glassEffect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
 .card {
   width: 100%;
   height: 200px;

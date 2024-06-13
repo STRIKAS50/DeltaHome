@@ -1,6 +1,9 @@
 import Image from "next/image"
 import FeatureIMage from "../../../public/VisionIMage.png"
+import DeltaLogo from "../../../public/deltainfosoftonly.png"
 import { CircleCheckIcon } from "lucide-react"
+import { BackgroundGradientAnimation } from "../ui/background-gradient-animation"
+
 export function Visiongrid() {
   return (
     <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto py-12 px-4 md:px-0">
@@ -17,8 +20,19 @@ export function Visiongrid() {
         // width={300}
         />
         <div className="absolute bottom-0 bg-gradient-to-t from-black to-transparent left-0 w-full p-4">
-          <h2 className="text-4xl font-bold text-white tracking-tight flex justify-end">Sandip Mevada</h2>
-          <p className="text-xl font-bold text-white tracking-tight flex justify-end">Chief Managing Director</p>
+          <div className=" rounded-2xl p-4 relative">
+            {/* dark:backdrop-blur-sm dark:bg-white/30 */}
+            {/* <Image
+              src={DeltaLogo}
+              alt="logo"
+              height={250}
+              width={250}
+              className="flex justify-start item -center"
+            /> */}
+            <h2 className="text-4xl font-bold text-white tracking-tight flex justify-end">Sandip Mevada</h2>
+            <p className="text-xl font-bold text-white tracking-tight flex justify-end">Chief Managing Director</p>
+          </div>
+
         </div>
       </div>
 
@@ -61,15 +75,21 @@ export function Visiongrid() {
 
         </ul>
         <div className="flex flex-col items-end  gap-4">
-          <div className="bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 relative">
-            <div className="prose prose-stone text-3xl  dark:prose-invert">
-              <blockquote>
-                <p className="my-5">“ Helping MSME's in Technology to scale and exponential growth. Visionary and dedicated toward Mission to become ”</p>
-              </blockquote>
+          <BackgroundGradientAnimation>
+            <div className="rounded-2xl p-4 relative">
+              <div className="prose prose-stone text-3xl  dark:prose-invert">
+
+
+                <blockquote>
+
+                  <p className="my-5 mx-5 "><em>“ Helping MSME's in Technology to scale and exponential growth. Visionary and dedicated toward Mission to become ”</em></p>
+                </blockquote>
+
+              </div>
+              {/* <div className="absolute bottom-0 left-4 -mb-4 w-0 h-0 border-t-8 border-t-transparent border-r-8 border-r-gray-100 dark:border-r-gray-800 border-b-8 border-b-transparent" /> */}
             </div>
-            {/* <div className="absolute bottom-0 left-4 -mb-4 w-0 h-0 border-t-8 border-t-transparent border-r-8 border-r-gray-100 dark:border-r-gray-800 border-b-8 border-b-transparent" /> */}
-          </div>
-          <div className="text-gray-500 dark:text-gray-400 text-sm">- Sandip Mevada</div>
+            <div className="text-gray-500 dark:text-gray-400  flex justify-end text-md pb-5 pr-5">- Sandip Mevada</div>
+          </BackgroundGradientAnimation>
         </div>
       </div>
     </div>

@@ -18,16 +18,26 @@ const config: Config = {
 
     extend: {
       fontFamily: {
-        customFont: ['Gluten', "sans-serif"],
-    
+        inter: ['var(--font-inter)'],
+        mono: ['var(--font-roboto-mono)'],
+        gluton: ['var(--font-gluton)'],
+
       },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        'transparent-gray': 'rgba(31, 41, 55, 0.1)',
+        'transparent-white': 'rgba(255, 255, 255, 0.1)',
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
     animation: {
+      first: "moveVertical 30s ease infinite",
+      second: "moveInCircle 20s reverse infinite",
+      third: "moveInCircle 40s linear infinite",
+      fourth: "moveHorizontal 40s ease infinite",
+      fifth: "moveInCircle 20s ease infinite",
       meteor: "meteor 5s linear infinite",
       marquee: "marquee var(--duration) linear infinite",
       "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
@@ -40,6 +50,39 @@ const config: Config = {
       "border-beam": {
         "100%": {
           "offset-distance": "100%",
+        },
+      },
+      moveHorizontal: {
+        "0%": {
+          transform: "translateX(-50%) translateY(-10%)",
+        },
+        "50%": {
+          transform: "translateX(50%) translateY(10%)",
+        },
+        "100%": {
+          transform: "translateX(-50%) translateY(-10%)",
+        },
+      },
+      moveInCircle: {
+        "0%": {
+          transform: "rotate(0deg)",
+        },
+        "50%": {
+          transform: "rotate(180deg)",
+        },
+        "100%": {
+          transform: "rotate(360deg)",
+        },
+      },
+      moveVertical: {
+        "0%": {
+          transform: "translateY(-50%)",
+        },
+        "50%": {
+          transform: "translateY(50%)",
+        },
+        "100%": {
+          transform: "translateY(-50%)",
         },
       },
       meteor: {
@@ -95,8 +138,8 @@ const config: Config = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
-      require("tailwindcss-animate")
-],
+    require("tailwindcss-animate")
+  ],
 
 };
 function addVariablesForColors({ addBase, theme }: any) {

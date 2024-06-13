@@ -124,7 +124,7 @@ export function SiteFooter() {
     return (
         <footer>
             <div className="w-full h-full p-4 flex flex-col pt-10 items-center">
-                <h1 className="text-lg md:text-7xl bg-clip-text my-5 text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
+                <h1 className="text-lg md:text-7xl bg-clip-text my-5 text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center  font-bold">
                     Share your workflow, <br />
                     Smooth your workflow.
                 </h1>

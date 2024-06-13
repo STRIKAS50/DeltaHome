@@ -9,9 +9,12 @@ import { Footer } from "antd/es/layout/layout";
 import { SiteFooter } from "./widgets/Footer";
 import Contactus from "./widgets/ContactUs";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-const inter = Inter({ subsets: ["latin"] });
-// import ThemeToggleButton from "@/components/component/ThemeToggleButton"
 
+ 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -213,7 +216,7 @@ export default function RootLayout({
         <div className="relative w-full pt-10">
           <FloatingNav navItems={navItems} />
           {/* <ThemeToggleButton /> */}
-          <div className="relative w-full">{children}</div>
+          <div className={`${inter.variable} relative w-full --font-inter`}>{children}</div>
         </div>
 
         <Analytics />

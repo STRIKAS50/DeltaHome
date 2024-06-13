@@ -77,7 +77,7 @@ const page = () => {
 
             <div className="relative h-screen pr-5  flex-grow flex items-center">
                 <div className="z-10 p-4 text-lg pl-10 text-white w-1/2">
-                    <h1 className="text-md md:text-5xl bg-clip-text bg-gradient-to-b text-black dark:text-neutral-300 text-start font-sans font-bold">
+                    <h1 className="text-md md:text-5xl bg-clip-text bg-gradient-to-b text-black dark:text-neutral-300 text-start  font-bold">
                         We provide the best and fast<br /> service and solutions.
                     </h1>
                     <p className="text-lg text-gray-500 dark:text-gray-400">Join with us to get service from us.</p>
@@ -116,7 +116,7 @@ const page = () => {
                     <div className="w-1/2 flex flex-col">
                         <div className="p-4">
                             <div className="z-10 p-4 text-lg text-white">
-                                <h1 className="text-md my-2 md:text-5xl bg-clip-text bg-gradient-to-b text-black dark:text-neutral-300 text-start font-sans font-bold">
+                                <h1 className="text-md my-2 md:text-5xl bg-clip-text bg-gradient-to-b text-black dark:text-neutral-300 text-start  font-bold">
                                     Client-Centric Design
                                 </h1>
                                 <h2 className="text-md text-gray-500 dark:text-gray-400">
