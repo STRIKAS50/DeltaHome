@@ -7,6 +7,7 @@ import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { ProductPreview } from '@/components/component/product-preview'
 import { CardStack } from '@/components/ui/card-stack'
 import { cn } from '../utils/cn'
+import Highlight from "@/app/widgets/Highlight"
 // import Explore from "@/components/NewUi/Explore"
 
 
@@ -164,19 +165,3 @@ const page = () => {
 
 export default page
 
-
-export const Highlight = ({
-    children,
-    className,
-}) => {
-    return (
-        <span
-            className={cn(
-                "font-bold bg-teal-100 text-teal-700 dark:bg-teal-700/[0.2] dark:text-teal-500 px-1 py-0.5",
-                className
-            )}
-        >
-            {children}
-        </span>
-    );
-};
