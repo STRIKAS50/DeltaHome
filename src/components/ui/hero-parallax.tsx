@@ -19,9 +19,9 @@ export const HeroParallax = ({
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  const firstRow = products.slice(0, 3);
+  const secondRow = products.slice(3, 6);
+  const thirdRow = products.slice(6, 9);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -57,7 +57,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[350vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -128,17 +128,17 @@ export const Header = () => {
       amazing products. */}
           </p>
         </div>
-        <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-          <Image
-            src="/Hometest.png"
-            alt="Picture of the author"
-            width={350}
-            height={350}
-            objectFit="cover"
-            quality={100}
-            className="z-100"
-          />
-        </div>
+        <div className="absolute right-0 top-1/2 mt-10 transform -translate-y-1/2 z-20">
+    <Image
+      src="/Hometest.png"
+      alt="Picture of the author"
+      width={400}
+      height={400}
+      objectFit="cover"
+      quality={100}
+      className="opacity-100 hidden sm:flex z-20" 
+    />
+  </div>
       </div>
 
     </>
@@ -171,16 +171,19 @@ export const ProductCard = ({
         href={product.link}
         className="block group-hover/product:shadow-2xl "
       >
+        {/* parallax images heree */}
         <Image
           src={product.thumbnail}
-          layout="fill"
-          objectFit="cover"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          // layout="fill"
+          // objectFit="cover"
+          height={600}
+          width={600}
+          className="object-cover lg-round object-left-top absolute  inset-0"
           alt={product.title}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+      {/* <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div> */}
+      <h2 className="absolute dark:text-black text-xl left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>
     </motion.div>

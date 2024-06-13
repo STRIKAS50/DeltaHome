@@ -12,11 +12,7 @@ import media from "../../../public/socialmedia.png"
 import ECOM from "../../../public/ecommerceecom.png"
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 const page = () => {
-    const gridStyle = {
-        width: '25%',
-        textAlign: 'center',
-    };
-
+    
 
     const projects = [
         {
@@ -70,23 +66,24 @@ const page = () => {
         },
     ];
     return (
-        <><div className="relative flex h-full w-screen flex-col justify-between overflow-hidden rounded-lg bg-background pt-10 md:shadow-xl">
+        <>
+        <div className="relative pt-20 mt-10 flex h-full  flex-col justify-between overflow-hidden rounded-lg bg-background pt-10 md:shadow-xl">
             <div className="flex justify-center items-center mb-10">
-                <span className="pointer-events-none mt-10 z-10 whitespace-pre-wrap bg-gradient-to-b from-[#36817F] via-[#68ACB6] to-[#36817F] bg-clip-text text-7xl font-bold leading-none tracking-tighter text-transparent">
-                    Services
+                <span className="pointer-events-none  z-10 whitespace-pre-wrap bg-gradient-to-b from-[#36817F] via-[#68ACB6] to-[#36817F] bg-clip-text text-7xl font-bold leading-none tracking-tighter text-transparent">
+                    Our Services
                 </span>
             </div>
 
 
-            <div className="relative h-screen pr-5 flex-grow flex items-center">
-                <div className="z-10 p-4 text-lg text-white w-1/2">
+            <div className="relative h-screen pr-5  flex-grow flex items-center">
+                <div className="z-10 p-4 text-lg pl-10 text-white w-1/2">
                     <h1 className="text-md md:text-5xl bg-clip-text bg-gradient-to-b text-black dark:text-neutral-300 text-start font-sans font-bold">
                         We provide the best and fast<br /> service and solutions.
                     </h1>
                     <p className="text-lg text-gray-500 dark:text-gray-400">Join with us to get service from us.</p>
                 </div>
                 <RetroGrid />
-                <div className="w-1/2 flex justify-end">
+                <div className="w-1/2 pr-10 pb-20 flex justify-end">
                     <Image
                         src={service}
                         alt="Service logo"

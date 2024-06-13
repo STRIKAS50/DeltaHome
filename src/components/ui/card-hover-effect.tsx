@@ -23,7 +23,7 @@ export const HoverEffect = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-6",
+                "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-6",
                 className
             )}
         >
@@ -31,14 +31,14 @@ export const HoverEffect = ({
                 <Link
                     href={item?.link}
                     key={item?.link}
-                    className="relative group  block p-2 h-full w-full"
+                    className="relative group block p-2 w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
                     <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
-                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                                 layoutId="hoverBackground"
                                 initial={{ opacity: 0 }}
                                 animate={{
@@ -53,7 +53,7 @@ export const HoverEffect = ({
                         )}
                     </AnimatePresence>
                     <Card>
-                        <div className="relative flex items-center justify-center h-40 w-full overflow-hidden">
+                      {item.image !=="" ? <div className="relative flex items-center justify-center h-40 w-full overflow-hidden">
                             <Image
                                 src={item.image}
                                 height={200}
@@ -62,21 +62,20 @@ export const HoverEffect = ({
                                 alt={item.title}
                                 className="absolute z-0"
                             />
-                        </div>
-                        <div >
-                            <CardTitle >{item.title}</CardTitle>
-                            <CardDescription >{item.description}</CardDescription>
+                        </div>:<></>}
+                        <div>
+                            <CardTitle className="lg:text-4xl sm:text-2xl md:text-3xl">{item.title}</CardTitle>
+                            <CardDescription>{item.description}</CardDescription>
                             {item.feature && (
                                 <>
-                                <CardTitle className="my-3 font-bold"><u>Key Features</u> </CardTitle>
-                                <ul className="list-disc pl-5 mt-2">
-                                    {item.feature.split('\n').map((feat, index) => (
-                                        <li key={index}>{feat}</li>
-                                    ))}
-                                </ul>
+                                    <CardTitle className="my-3 font-bold flex justify-start lg:text-2xl sm:text-md md:text-2xl "><u>Key Features</u></CardTitle>
+                                    <ul className="list-disc pl-5 mt-2 text-white lg:text-2xl sm:text-md md:text-2xl ">
+                                        {item.feature.split('\n').map((feat, index) => (
+                                            <li key={index}>{feat}</li>
+                                        ))}
+                                    </ul>
                                 </>
                             )}
-                     
                         </div>
                     </Card>
                 </Link>
@@ -84,6 +83,7 @@ export const HoverEffect = ({
         </div>
     );
 };
+
 
 export const Card = ({
     className,

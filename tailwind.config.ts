@@ -15,7 +15,12 @@ const config: Config = {
   ],
   // darkMode: "class",
   theme: {
+
     extend: {
+      fontFamily: {
+        customFont: ['Gluten', "sans-serif"],
+    
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -90,8 +95,8 @@ const config: Config = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
-
-  ],
+      require("tailwindcss-animate")
+],
 
 };
 function addVariablesForColors({ addBase, theme }: any) {

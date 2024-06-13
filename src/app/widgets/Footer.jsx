@@ -4,7 +4,7 @@ import logo from "../../../public/deltainfosoftonly.png"
 import Image from "next/image";
 import { LinkedinIcon } from "lucide-react";
 import { IconBrandFacebook } from "@tabler/icons-react";
-
+import {Accordianforfooter} from "@/components/component/accordianforfooter"
 const footerNavs = [
     {
         label: "Navigation",
@@ -32,7 +32,7 @@ const footerNavs = [
         ],
     },
     {
-        label: "What We Doroduct",
+        label: "What We Do",
         items: [
             {
                 href: "/",
@@ -123,15 +123,15 @@ const footerSocials = [
 export function SiteFooter() {
     return (
         <footer>
-             <div className="w-full p-4 flex flex-col pt-10 items-center">
-          <h1 className="text-lg md:text-7xl bg-clip-text my-5 text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
-          Share your workflow, <br/>
-Smooth your workflow.
-          </h1>
-        </div>
+            <div className="w-full h-full p-4 flex flex-col pt-10 items-center">
+                <h1 className="text-lg md:text-7xl bg-clip-text my-5 text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
+                    Share your workflow, <br />
+                    Smooth your workflow.
+                </h1>
+            </div>
             <div className="mx-auto w-full max-w-screen-xl xl:pb-2">
                 <div className="md:flex md:justify-between px-8 p-4 py-16 sm:pb-16 gap-4">
-                    <div className="mb-12 flex-col flex gap-4">
+                    <div className="mb-12 flex-col flex gap-6">
                         <Link href="/" className="flex items-center gap-2">
                             <Image
                                 src={logo}
@@ -140,11 +140,10 @@ Smooth your workflow.
                                 width={200}
                                 className="text-primary"
                             />
-                            {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Delta
-              </span> */}
+                          
                         </Link>
-                        {/* <p className="max-w-xs">The next generation UI library</p> */}
+                       <p>Where we Produces Our Innovations ........</p>
+                      <Accordianforfooter/>
                     </div>
                     <div className="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-4">
                         {footerNavs.map((nav) => (
@@ -183,11 +182,11 @@ Smooth your workflow.
                         ))}
                     </div>
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                        Copyright © {new Date().getFullYear()}{" "}all rights reserved by Delta Infosoft Pvt Ltd. 
+                        Copyright © {new Date().getFullYear()}{" "}all rights reserved by Delta Infosoft Pvt Ltd.
                         {/* <Link href="/" className="cursor-pointer">
                             
                         </Link> */}
-                       
+
                     </span>
                 </div>
             </div>

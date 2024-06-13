@@ -1,98 +1,45 @@
 "use client";
 import React from "react";
 import { HeroParallax } from "../../components/ui/hero-parallax";
-import homeImage from "../../../public/Dashboard Waterman.png"
-import delvelopment from "../../../public/Development.png"
-import ksbDashboard from "../../../public/KSB.png"
-import cando from "../../../public/Cando Message.png"
+import DeltaIerp from "../../../public/DashboardProduct/Group 22597.png"
+import GateMOdule from "../../../public/DashboardProduct/Group 22598.png"
+import Barcode from "../../../public/DashboardProduct/Group 22602.png"
+import Labhchart from "../../../public/DashboardProduct/Group 22604.png"
+import kanban from "../../../public/DashboardProduct/Kanban.png"
+
 export function HeroParalla() {
 
     return <HeroParallax products={products} />;
 }
 export const products = [
+ 
     {
-        title: "WaterMan ",
+        title: "DeltaIerp ",
         link: "#",
-        thumbnail:homeImage.src,
+        thumbnail:DeltaIerp.src,
     },
     {
-        title: "Development",
+        title: "GateModule",
         link: "#",
         thumbnail:
-        delvelopment.src,
+        GateMOdule.src,
     },
     {
-        title: "KSB Mobile App",
+        title: "Barcode",
         link: "#",
-        thumbnail:ksbDashboard.src,
+        thumbnail:Barcode.src,
     },
 
     {
-        title: "Banas CanDo",
+        title: "Labhchart",
         link: "#",
         thumbnail:
-        cando.src,
+        Labhchart.src,
     },
     {
-        title: "ICRM",
+        title: "Kanban",
         link: "#",
-        thumbnail:homeImage.src,
-    },
-    {
-        title: "Development",
-        link: "#",
-        thumbnail:
-        delvelopment.src,
-    },
-
-    {
-        title: "ICRM",
-        link: "#",
-        thumbnail:homeImage.src,
-    },
-    {
-        title: "Development",
-        link: "#",
-        thumbnail:
-        delvelopment.src,
+        thumbnail:kanban.src,
     },
    
-    {
-        title: "ICRM",
-        link: "#",
-        thumbnail:homeImage.src,
-    },
-
-    {
-        title: "Development",
-        link: "#",
-        thumbnail:
-        delvelopment.src,
-    },
-    {
-        title: "ICRM",
-        link: "#",
-        thumbnail:homeImage.src,
-    },
-    {
-        title: "Development",
-        link: "#",
-        thumbnail:
-        delvelopment.src,
-    },
-    {
-        title: "ICRM",
-        link: "#",
-        thumbnail:homeImage.src,
-    },
-    {
-        title: "ICRM",
-        link: "#",
-        thumbnail:homeImage.src,
-    },
-    {
-        title: "ICRM",
-        link: "#",
-        thumbnail:homeImage.src,
-    },
 ];

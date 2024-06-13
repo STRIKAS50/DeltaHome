@@ -14,6 +14,7 @@ const transition = {
 };
 
 export const MenuItem = ({
+  href,
   setActive,
   active,
   item,
@@ -22,9 +23,11 @@ export const MenuItem = ({
   setActive: (item: string) => void;
   active: string | null;
   item: string;
+  href:string,
   children?: React.ReactNode;
 }) => {
   return (
+    <Link href={href} className="flex space-x-2">
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
@@ -57,6 +60,7 @@ export const MenuItem = ({
         </motion.div>
       )}
     </div>
+    </Link>
   );
 };
 
@@ -88,6 +92,7 @@ export const ProductItem = ({
   href: string;
   src: string;
 }) => {
+  console.log("HERREE",title,description);
   return (
     <Link href={href} className="flex space-x-2">
       <Image
@@ -109,11 +114,12 @@ export const ProductItem = ({
   );
 };
 
+
 export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200  "
+      className="text-neutral-700 dark:text-neutral-200 "
     >
       {children}
     </Link>
