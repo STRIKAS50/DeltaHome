@@ -3,7 +3,6 @@ import Image from "next/image";
 import RadialGradient from "@/components/magicui/radial-gradient";
 import React, { useState } from "react";
 // import Navbar from "./widgets/Navbar";
-import Background from "@/components/Background";
 import strategy from "../../public/strategystrategy.png"
 import braning from "../../public/marketingmarketing.png"
 import dev from "../../public/developmentdev.png"
