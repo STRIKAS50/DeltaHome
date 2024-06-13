@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.tsx", "src/app/widgets/retroGrid.jsx", "src/components/magicui/icon-cloud.tsx", "src/components/component/accordianforfooter.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.tsx", "src/app/widgets/retroGrid.jsx", "src/components/magicui/icon-cloud.tsx", "src/components/component/accordianforfooter.jsx", "src/components/component/customer-story.jsx"],
   "exclude": ["node_modules"]
 }
