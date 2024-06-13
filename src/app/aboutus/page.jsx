@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import about from "../../../public/exponential.jpg"
-import { GlobeDemo } from "@/app/widgets/Glob"
 import Image from 'next/image'
 import { History } from '@/components/component/history'
 import { Teamleads } from '@/components/component/teamleads'

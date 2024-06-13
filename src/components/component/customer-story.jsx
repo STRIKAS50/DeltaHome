@@ -14,7 +14,7 @@ export default function Component() {
   const customerStories = [
     {
       id: 1,
-      image:Duke.src,
+      image: Duke.src,
       title: "Prabhudas Patel",
       designation: "Managing Director, Duke Plasto Technique",
       description: "The people at Delta Infosoft not only make everything simple but also assist us at any given point in time. Their level of understand with customer requirements is tremendous. which is very supportive and work 24/7 to help us.",

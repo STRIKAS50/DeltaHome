@@ -64,7 +64,7 @@ export const CardStack = ({
                 {card.designation}
               </p>
             </div>
-            <div className=" text-neutral-700  md:text-4xl sm:xl lg:text-2xl  dark:text-neutral-200">
+            <div className=" text-neutral-700  md:text-4xl sm:xl lg:text-2xl  pb-3 dark:text-neutral-200">
               {card.content}
             </div>
           </motion.div>
