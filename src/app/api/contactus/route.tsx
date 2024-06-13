@@ -1,4 +1,4 @@
-import { connectToDatabase } from '../../DBConfig';
+import { connectToDatabase } from '../../dbConfig';
 import userData from "../../modal/DataRecieveing"
 import { NextRequest, NextResponse } from "next/server";
 

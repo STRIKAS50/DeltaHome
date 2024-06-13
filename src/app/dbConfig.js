@@ -4,8 +4,8 @@ export async function connectToDatabase() {
 
         // mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
         // mongoose.connect("mongodb://127.0.0.1:27017/landingpage",{ useNewUrlParser: true, useUnifiedTopology: true });
-        mongoose.connect("mongodb+srv://DeveloperTest:Developer2022DD@cluster0.puyhapm.mongodb.net/landingpage",{ useNewUrlParser: true, useUnifiedTopology: true });
-
+        mongoose.connect(process.env.MONGOURL, { useNewUrlParser: true, useUnifiedTopology: true });
+        console.log("HIHIH",process.env.MONGOURL)
         const connection = mongoose.connection;
         connection.on('connected', () => {
             console.log("MongoDb Connected Successfully")
